@@ -1,0 +1,9 @@
+modLoader="javafml"
+loaderVersion="[49,)"
+license="MIT"
+
+[[mods]]
+modId="hwhw"
+version="1.0.0"
+displayName="Hwhw DuelBot Mod"
+description='''Eine Mod, um gegen einen DuelBot zu kämpfen.'''
