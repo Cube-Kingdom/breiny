@@ -1,9 +1,15 @@
 package com.hwhw.duelmod;
 
+import com.mojang.brigadier.CommandDispatcher;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 
 public class DuelCommand {
 
@@ -12,7 +18,7 @@ public class DuelCommand {
                 .executes(context -> {
                     Player player = context.getSource().getPlayerOrException();
                     DuelBotEntity bot = new DuelBotEntity(ModEntities.DUEL_BOT.get(), player.level());
-                    bot.moveTo(player.getX()+2, player.getY(), player.getZ()+2, 0,0);
+                    bot.moveTo(player.getX() + 2, player.getY(), player.getZ() + 2, 0, 0);
                     player.level().addFreshEntity(bot);
 
                     // Heldenausrüstung
